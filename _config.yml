@@ -3,22 +3,28 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
-description:
-keywords:
-author: John Doe
-language:
+title: Eighteen Blog
+subtitle: Eighteen Blog
+description: 好学力行，明德任责。一起分享芝士。
+keywords: 前端, LH_ZSF, Eighteen Blog, ZSF, 赵十八, 赵少飞
+author: 赵十八
+language: 
+- zh-CN
+- en
+- zh-HK
+- zh-TW
+favicon: http://www.zsfmyz.top/img/eighteen.ico
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://www.zsfmyz.top/
 root: /
-permalink: :year/:month/:day/:title/
+# 浏览器地址的格式 category为分类， title为标题
+permalink: :category/:title/
 permalink_defaults:
 
-# Directory
+# Directory 根目录 输出目录
 source_dir: source
 public_dir: public
 tag_dir: tags
@@ -31,7 +37,7 @@ skip_render:
 # Writing
 new_post_name: :title.md # File name of new posts
 default_layout: post
-titlecase: false # Transform title into titlecase
+titlecase: true # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
@@ -73,9 +79,59 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: material-x
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: https://github.com/lunhui1994/lunhui1994.github.io.git
+  branch: master
+
+# live2d 看板娘
+
+live2d:
+  enable: true
+  tagMode: false # Whether only to replace live2d tag instead of inject to all pages
+  log: false # Whether to show logs in console
+  model: 
+    use: 
+    scale: 0.7
+    hHeadPos: 0.5
+    vHeadPos: 0.618
+  display:
+    superSample: 2
+    width: 150
+    height: 300
+    position: right
+    hOffset: 0
+    vOffset: -20
+  mobile:
+    show: false
+    scale: 0.5
+  react:
+    opacityDefault: 0.7
+    opacityOnHover: 0.2
+
+# 自动生成sitemap
+
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
+
+# Extensions
+plugins:
+  hexo-generator-feed
+#Feed Atom
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+
+gitalk:
+  clientID: '57052046652c742e7a75'
+  clientSecret: 'dc4cffe55050ef4cad3363710a11b074f1ddca98'
+  repo: 'blogtalk'
+  owner: 'lunhui1994'
+  admin: ['lunhui1994']
