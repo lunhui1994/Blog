@@ -1,6 +1,6 @@
 ---
 title: Git入门篇
-date: 2019-08-15 15:14:27
+date: 2019-11-28 15:14:27
 categories: Git
 tags: Git
 keywords: Git, Git入门
@@ -11,7 +11,17 @@ keywords: Git, Git入门
  - 首先我们需要去github官网申请git账号。[git官网](https://github.com/)
  - 申请之后，我们进入自己的linux服务器
 
+ - 安装git
+
+ ```
+    yum install -y git
+
+    git --version
+ ```
+
 <!-- more -->
+- 配置 ssh-keygen
+
 ```
     // 生成key
     ssh-keygen
@@ -265,4 +275,12 @@ push之后我们的远程分支就会和本地分支的内容一样了。
 
 以上就是常用的git命令，当然还有更多的和更深的命令，可以扩展了解一下。
 
+另外我们装完git如果颜色都是白色的，会感觉不太容易区分。可以配置下颜色
 
+```
+    git config --global color.status auto
+    git config --global color.diff auto
+    git config --global color.branch auto
+    git config --global color.interactive auto
+
+```
