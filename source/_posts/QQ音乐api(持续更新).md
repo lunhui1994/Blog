@@ -6,8 +6,15 @@ type: mylist
 categories: api
 tags: api
 keywords: QQ音乐api
+top: true
 ---
 # 说明
+
+#### 2019/12/26 更新
+
+1. 获取歌曲播放地址接口 增加 lyric参数代表是否获取歌词。
+2. 增加获取歌词接口
+
 
 #### 2019/12/24 更新
 
@@ -33,18 +40,19 @@ keywords: QQ音乐api
 2. 音乐top100列表
 3. 音乐播放地址
 4. 福利图片 (新增 2019/12/24).
+5. 音乐歌词 (新增 2019/12/26).
 
 很简单的三个基本的功能。
 
 所有方法都是GET
 
+本项目所支持的Api
+
 ## 音乐 music
 
-## 音乐列表
+### 音乐列表
 
-### /list
-
-发送参数：
+#### list
 
 | 参数   |  类型  |  描述 |
 | ---    |  ---   | ---   |
@@ -53,7 +61,7 @@ keywords: QQ音乐api
 | w | string  | 关键词 |
 
 
-返回参数：
+返回参数
 
 | 参数   |  类型  |  描述 |
 | ---   |  ---  | ---   |
@@ -64,51 +72,59 @@ keywords: QQ音乐api
 eg：
 
 ```
-    http://api.zsfmyz.top/music/list?p=1&n=30&w=下山
+    http://api.zsfmyz.top/music/list?p=1&n=30&w=简单爱
 ```
 
 返回参数举例
 
 ```
     {
-    "code": "0",
-    "data": {
-        "curnum": 30, //数目
-        "curpage": 1, //页数
-        "list": [
-            {
-                "songname": "下山", //歌曲名称
-                "singer": { // 歌手信息
-                    "id": 4185269,
-                    "mid": "001adk3q0FE3XP",
-                    "name": "要不要买菜",
-                    "name_hilight": "要不要买菜"
-                },
-                "albumname": "下山", //专辑名称
-                "songmid": "001GAAVj1GjW8F", //很重要用来获取vkey 拼接播放地址
-                "albumimg": "http://imgcache.qq.com/music/photo/album_300/57300_albumpic_9327357_0.jpg" //封面地址
+    "curnum": 41,
+    "curpage": 1,
+    "list": [
+        {
+            "songname": "简单爱",
+            "singer": {
+                "id": 4558,
+                "mid": "0025NhlN2yWrP4",
+                "name": "周杰伦",
+                "name_hilight": "周杰伦"
             },
-            {
-                "songname": "下山 (Cover: 要不要买菜)",
-                "singer": {
-                    "id": 162021,
-                    "mid": "003QznRR2ry01V",
-                    "name": "叶洛洛",
-                    "name_hilight": "叶洛洛"
-                },
-                "albumname": "叶洛洛の音乐电台",
-                "songmid": "000elQIm3uD9kX",
-                "albumimg": "http://imgcache.qq.com/music/photo/album_300/99300_albumpic_6938999_0.jpg"
+            "albumname": "范特西",
+            "songmid": "0009BCJK1nRaad",
+            "albumimg": "http://imgcache.qq.com/music/photo/album_300/17300_albumpic_8217_0.jpg"
+        },
+        {
+            "songname": "简单爱 (Live)",
+            "singer": {
+                "id": 4558,
+                "mid": "0025NhlN2yWrP4",
+                "name": "周杰伦",
+                "name_hilight": "周杰伦"
             },
-			// ...
-        ]
-    }
+            "albumname": "周杰伦 2004 无与伦比 演唱会 Live CD",
+            "songmid": "0022nw6P1dcHgp",
+            "albumimg": "http://imgcache.qq.com/music/photo/album_300/23300_albumpic_14323_0.jpg"
+        },
+        {
+            "songname": "简单爱 (Live)",
+            "singer": {
+                "id": 143,
+                "mid": "003Nz2So3XXYek",
+                "name": "陈奕迅",
+                "name_hilight": "陈奕迅"
+            },
+            "albumname": "2015江苏卫视新年演唱会",
+            "songmid": "001IcyF42TKTf1",
+            "albumimg": "http://imgcache.qq.com/music/photo/album_300/53300_albumpic_929853_0.jpg"
+        }
+    ]
 }
 ```
 
-## 音乐top100列表
+### 音乐top100列表
 
-### /top
+#### top
 
 参数
 
@@ -132,7 +148,7 @@ list中歌曲信息比普通列表多了排名: cur_count
 eg：
 
 ```
-    http://api.zsfmyz.top/music/top
+    https://api.zsfmyz.top/music/top
 ```
 
 返回参数举例
@@ -277,15 +293,16 @@ eg：
 }
 ```
 
-## 音乐播放地址
+### 音乐播放地址
 
-### /music
+#### song
 
 
 | 参数   |  类型  |  描述 |
 | ---    |  ---   | ---   |
 | songmid | string  | 用于获取token | 
-| guid | string  | 用于获取token，暂固定用126548448| 
+| guid | string  | 用于获取token| 
+| lyric | string  | 默认为0不获取歌词，1获取歌词 | 
 
 其他参数固定
 
@@ -299,7 +316,7 @@ eg：
 eg:
 
 ```
-    http://api.zsfmyz.top/music/song?songmid=003lghpv0jfFXG&guid=126548448
+    https://api.zsfmyz.top/music/song?songmid=003lghpv0jfFXG&guid=126548448
 ```
 
 返回参数举例
@@ -308,7 +325,45 @@ eg:
     {
     "code": "0",
     "data": {
-        "musicUrl": "http://ws.stream.qqmusic.qq.com/C400003lghpv0jfFXG.m4a?fromtag=0&guid=126548448&vkey=7888A32FC10168AAD914CA484401762D7F060E7337C0B9187D8B907681BB177669ADB3DFBF398E0FC4D6ED1E0EC7574716872D7B5FE14322"
+        "musicUrl": "http://ws.stream.qqmusic.qq.com/C400003lghpv0jfFXG.m4a?fromtag=0&guid=126548448&vkey=7888A32FC10168AAD914CA484401762D7F060E7337C0B9187D8B907681BB177669ADB3DFBF398E0FC4D6ED1E0EC7574716872D7B5FE14322",
+        "lyric": "无"
+    }
+}
+
+```
+
+### 音乐歌词
+
+#### lyric
+
+
+| 参数   |  类型  |  描述 |
+| ---    |  ---   | ---   |
+| songmid | string  | 用于获取歌词 | 
+
+其他参数固定
+
+返回参数
+
+| 参数   |  类型  |  描述 |
+| ---    |  ---   | ---   |
+| lyric | string  | 歌词内容| 
+
+
+eg:
+
+```
+    https://api.zsfmyz.top/music/lyric?songmid=000wocYU11tSzS
+```
+
+返回参数举例
+
+```
+    {
+    "code": "0",
+    "data": {
+        "lyric": "[ti:差不多姑娘]\n[ar:G.E.M. 邓紫棋]\n[al:差不多姑娘]\n[by:]\n[offset:0]\n[00:00.00]差不多姑娘 - G.E.M. 邓紫棋\n[00:00.17]\n[00:02.67]差不多的姑娘\n[00:06.27]追逐差不多的漂亮\n[00:11.88]她们差不多的愿望\n[00:17.18]牵着她们鼻子方向\n[00:23.05]我回到差不多的家\n[00:24.38]躺在差不多的沙发\n[00:25.68]微博差不多的刷\n[00:26.99]都吃着差不多的瓜\n[00:28.48]那标题差不多的炸\n[00:29.78]...",
+        }
     }
 }
 
@@ -319,7 +374,7 @@ eg:
 
 > 根据每日福利社的接口进行了封装，因为他们的https失效了，所以自己反向代理了。
 
-## 图片列表
+### 图片列表
 
 #### list
 
@@ -339,7 +394,7 @@ eg:
 eg:
 
 ```
-    http://www.xxx.com/welfare/list?per_page=20&page=2
+    https://api.zsfmyz.top/welfare/list?per_page=20&page=2
 ```
 
 返回参数举例
@@ -378,6 +433,7 @@ eg:
 }
 
 ```
+
 
 
 over 暂时只有这 ~~ 三 ~~ 四个，不过做一个音乐demo足够了，有兴趣的话可以试试。
