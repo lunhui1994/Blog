@@ -328,7 +328,7 @@ url: http://你的网站
 ### 常见问题
 
 #### Hexo deploy 报错
-1. 报错信息如下
+**报错信息一**
 
 ```
 remote: Weak credentials. Please Update your password to continue using GitHub.
@@ -342,14 +342,14 @@ Error: Spawn failed
 
 
 ```
-1. **问题描述**
+**问题描述**
 这种报错是突然出现的，一看就知道是github的问题，大概意思就是说你的密码强度太低。
 所以造成了连接不上GitHub仓库地址的报错。刚开始还比较迷茫，不知道是哪个密码比较弱了。
 直到我想添加ssh key的时候，GitHub官网提醒，说我的GitHub密码比较弱，需要修改，否则一个月后自动修改。
 
 这简直比较狗血，没想到还会影响到git提交。 但是目前只发现会影响hexo deploy的自动部署，账号上的其他clone的仓库不会影响。
 
-2. **解决办法(linux)**
+**解决办法(linux)**
 
 1. 更改GitHub密码。
 2. 重新生成ssh key。

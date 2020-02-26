@@ -24,7 +24,7 @@ top: true
 
 > 接口仅供交流学习使用
 
-[github 项目地址](https://github.com/lunhui1994/node-music-api) 
+[github 项目地址](https://github.com/lunhui1994/node-music-api) 欢迎star
 
 因为之前使用网络上别人封装的音乐api现在无法使用，或者一些需要付费使用，当然这也无可厚非。
 
