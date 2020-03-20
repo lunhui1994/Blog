@@ -21,7 +21,7 @@ vue实现双向绑定原理，主要是利用Object.defineProperty 来给实例d
 
 监察者通过 Dep 向 Watcher发布更新消息
 
- 
+ <!-- more -->
 #### 简单实现
 
 那么首先

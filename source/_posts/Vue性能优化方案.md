@@ -10,11 +10,14 @@ keywords: Vue性能优化
 
 > 总结一下使用Vue涉及到的性能优化方法，从我实践和查阅资源总结出来的集合。
 
-简介：
+目录：
 1. **v-if 和 v-show**
     1. **v-if**
     2. **v-show**
 2. **computed 和 watch**
+3. **v-for加key，避免使用v-if**
+4. **keepalive**
+5. **Object.freeze长列表优化**
 
 
 <!-- more -->
@@ -134,9 +137,9 @@ watch: {
 将会基于key冲i性能排序元素顺序，删除key不存在的节点，替换和删除节点。
 它也能触发完整的生命周期函数。
 
-##### v-if和computed
+##### v-if 和 computed
 
-如果我们的列表只需要渲染其中的一部分，我们可以使用computed
+如果我们的列表只需要渲染其中的一部分，我们可以使用computed，即通过computed对最终显示数据进行过滤，而非在html中进行if判断过滤。
 
 #### 优化：
 官方建议：建议尽可能在使用 v-for 时提供 key attribute，除非遍历输出的 DOM 内容非常简单，或者是刻意依赖默认行为以获取性能上的提升。
@@ -181,7 +184,7 @@ keepalive是vue的一个组件，它自己的生命周期有created和destoryed,
 
 **watch**同时keepalive会监听include和exclude的变化，不存在的key将进行销毁并以出cache列表。
 
-keepalive 组件本身并不会生成节点，在keep-alive中，设置了 abstract: true ，该属性表示此组件为抽象组件意思就是不会生成实际节点，包括<trai>。
+keepalive 组件本身并不会生成节点，在keep-alive中，设置了 abstract: true ，该属性表示此组件为抽象组件意思就是不会生成实际节点。
 
 [相关荐文]("https://www.cnblogs.com/wangjiachen666/p/11497200.html")
 
@@ -198,4 +201,8 @@ keepalive 组件本身并不会生成节点，在keep-alive中，设置了 abstr
 
 ```
 this.list = Object.freeze(list);
+
 ```
+
+#### 优化
+对一些不需要双向绑定的列表进行Object.freeze()进行冻结，提高性能。
