@@ -91,7 +91,7 @@ deploy:
 # live2d 看板娘
 
 live2d:
-  enable: true
+  enable: false
   tagMode: false # Whether only to replace live2d tag instead of inject to all pages
   log: false # Whether to show logs in console
   model: 
