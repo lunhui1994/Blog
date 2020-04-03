@@ -7,7 +7,11 @@ keywords: hexo, 搭建, 配置, 添加Favicon, 添加百度统计, RSS订阅, �
 top: true
 ---
 
-主题是material-x
+主题是material-x 最新版本叫：**[volantis](https://github.com/xaoxuu/hexo-theme-volantis)**
+ 
+[主题最新仓库](https://github.com/xaoxuu/hexo-theme-volantis)
+
+[本博客主题所用版本](https://github.com/lunhui1994/hexo-theme-material-x)
 
 简介：
 1. **Hexo 添加Favicon**

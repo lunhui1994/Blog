@@ -73,6 +73,3 @@ document.addEventListener("dragover", function(event) {
     console.log("容器内");
 });
 ```
-
-
-下一章：

@@ -10,7 +10,7 @@ top: true
 >  前两篇文介绍了css3的过滤器filter用来实现图片的高斯模糊效果，还有js拖拽的功能。
 >  要实现局部模糊就要把两者结合起来，计算位移就可以了。
 
-### *实现原理**
+### **实现原理**
 > 原理其实很简单，就是两张图的叠加。底部一张**清晰**的图，上面一个**高斯模糊**过的图，将**高斯模糊**的图当作上层元素的背景，利用背景定位使其只显示一部分，然后把这个高斯模糊的窗口放置在高清图的上层，背景图片的位置与下面的图片位置一致，这样看起来就像一张高清的图片打上了马赛克一样。讲起来不是很清楚，大家可以看一下代码。
 
 <!-- more -->
@@ -173,7 +173,7 @@ var startDrag = function(bar, target, callback) {
         }
     </style>
     <div class="demo post white-box article-type-post">
-        <h2 class="title">mosaic Demo <a style="color: #bd4117;" href="http://www.zsfmyz.top/Css/Css3%20+%20Js%EF%BC%9A%E5%9B%BE%E7%89%87%E7%9A%84%E5%B1%80%E9%83%A8%E6%A8%A1%E7%B3%8A%EF%BC%88%E9%A9%AC%E8%B5%9B%E5%85%8B%EF%BC%89/">传送门</a></h2>
+        <h2 class="title">mosaic Demo <a style="color: #bd4117;" href="https://www.zsfmyz.top/Css/Css3%20+%20Js%EF%BC%9A%E5%9B%BE%E7%89%87%E7%9A%84%E5%B1%80%E9%83%A8%E6%A8%A1%E7%B3%8A%EF%BC%88%E9%A9%AC%E8%B5%9B%E5%85%8B%EF%BC%89/">传送门</a></h2>
 
         <div id="css_box">
             <div id="css_target">
@@ -324,7 +324,7 @@ var startDrag = function(bar, target, callback) {
 
 > 以上就是局部模糊的实现方法。可以直接套用。将JS部分当作文件引入。否则要把初始化函数放在函数声明的后面。
 
-最后可查看实际效果：[demo演示地址](http://www.zsfmyz.top/demo/mosaic/)
+最后可查看实际效果：[demo演示地址](https://www.zsfmyz.top/demo/mosaic/)
 
 
 *借鉴于张大神*

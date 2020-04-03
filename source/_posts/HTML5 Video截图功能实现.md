@@ -88,7 +88,7 @@ top: true
 ```
 ### Demo
 
-[demo演示地址](http://www.zsfmyz.top/demo/1/)
+[demo演示地址](https://www.zsfmyz.top/demo/1/)
 
 大家可以用webstrom内置的服务器进行测试。
 
