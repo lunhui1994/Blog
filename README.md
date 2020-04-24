@@ -2,6 +2,11 @@
 
 Hexo 说明文档
 
+### 项目部署
+1. git clone 到本地服务器
+2. 进入themes/文件夹，clone https://github.com/lunhui1994/hexo-theme-material-x 仓库并命名为material-x
+
+若mateiral-x有提交，请先提交material-x的修改，然后再提交本项目的修改。
 
 ### hexo 命令
 1. 创建文章:
