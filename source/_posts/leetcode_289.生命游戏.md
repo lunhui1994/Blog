@@ -1,14 +1,12 @@
 ---
-title: leetcode_264. 丑数 II
-date: 2019-10-12 11:59:13
+title: leetcode_289.生命游戏：巧妙处理边界问题。
+date: 2020-04-03 17:59:13
 categories: ['Algorithm','每日一题']
 tags: Algorithm
-keywords: leetcode, 264, 丑数 II
+keywords: leetcode, 生命游戏：巧妙处理边界问题
 ---
-题目过长，可以去leetcode看。
 ### [题目描述](https://leetcode-cn.com/problems/game-of-life/)
 
-<!-- more -->
 ### 解题思路
 其实这道题，大家看到第一眼应该就知道很简单了。
 
