@@ -26,6 +26,7 @@ keywords: leetcode, 快乐数, 快慢指针
 
 
 ```
+<!-- more -->
 
 
 ### 解题思路一

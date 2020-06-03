@@ -26,6 +26,7 @@ keywords: leetcode, 全排列, 广度优先遍历
 
 
 ```
+<!-- more -->
 
 
 ### 解题思路一

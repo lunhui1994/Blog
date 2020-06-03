@@ -41,6 +41,7 @@ minStack.getMin();   --> 返回 -2.
 pop、top 和 getMin 操作总是在 非空栈 上调用。
 
 ```
+<!-- more -->
 
 
 ### 解题思路一

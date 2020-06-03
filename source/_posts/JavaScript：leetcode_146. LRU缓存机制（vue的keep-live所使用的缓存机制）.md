@@ -18,6 +18,7 @@ keywords: leetcode, LRU缓存机制
 
 你是否可以在 O(1) 时间复杂度内完成这两种操作？
 ```
+<!-- more -->
 
 ### 解题思路一
 1. [LRU缓存机制](https://baike.baidu.com/item/LRU)，可以自行百度一下。

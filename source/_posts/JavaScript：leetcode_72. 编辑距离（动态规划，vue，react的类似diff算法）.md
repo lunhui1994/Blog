@@ -36,6 +36,8 @@ enention -> exention (将 'n' 替换为 'x')
 exention -> exection (将 'n' 替换为 'c')
 exection -> execution (插入 'u')
 ```
+<!-- more -->
+
 ### 说明
 此题是一个最短编辑距离问题，我们在工作中用到工具和框架有很多也是类似的算法。比如`Git`提交，对比差异。`vue`中将更新前的`虚拟dom`改成更新后的虚拟dom（vue中对此做了取舍，有优化）
 
