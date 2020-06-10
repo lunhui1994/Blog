@@ -13,12 +13,12 @@ language:
 - en
 - zh-HK
 - zh-TW
-favicon: http://www.zsfmyz.top/img/eighteen.ico
+favicon: https://www.zsfmyz.top/img/eighteen.ico
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://www.zsfmyz.top/
+url: https://www.zsfmyz.top/
 root: /
 # 浏览器地址的格式 category为分类， title为标题
 permalink: :category/:title/
