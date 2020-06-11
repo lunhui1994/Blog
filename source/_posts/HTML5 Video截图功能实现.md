@@ -4,7 +4,6 @@ date: 2019-08-30 15:37:09
 categories: JavaScript
 tags: JavaScript
 keywords: video, 截图, canvas, drawImage, toDataURL
-top: true
 ---
 
 ### 背景

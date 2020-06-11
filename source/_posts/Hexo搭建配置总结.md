@@ -4,7 +4,6 @@ date: 2019-08-27 18:14:27
 categories: Hexo
 tags: Hexo
 keywords: hexo, 搭建, 配置, 添加Favicon, 添加百度统计, RSS订阅, 添加看板娘, 网站地图, 评论系统 gitalk, hexo d 403
-top: true
 ---
 
 主题是material-x 最新版本叫：**[volantis](https://github.com/xaoxuu/hexo-theme-volantis)**
