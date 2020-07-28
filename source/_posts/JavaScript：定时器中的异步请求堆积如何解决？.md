@@ -1,5 +1,5 @@
 ---
-title: 定时器中的异步请求堆积如何解决？
+title: JavaScript：定时器中的异步请求堆积如何解决？
 date: 2020-03-14 12:50:34
 categories: JavaScript
 tags: JavaScript

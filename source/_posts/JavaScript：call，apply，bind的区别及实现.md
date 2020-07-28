@@ -1,6 +1,6 @@
 ---
 layout: '[layout]'
-title: call，apply，bind的区别及实现
+title: JavaScript：call，apply，bind的区别及实现
 date: 2019-01-11 15:10:03
 categories: JavaScript
 tags: JavaScript

@@ -1,6 +1,6 @@
 ---
 layout: '[layout, category]'
-title: 完全背包问题
+title: JavaScript：完全背包问题
 date: 2019-04-30 15:10:03
 type: mylist
 categories: Algorithm
