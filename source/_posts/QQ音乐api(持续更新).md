@@ -9,33 +9,33 @@ keywords: QQ音乐api
 top: true
 ---
 
-# 说明
-##### [github 项目地址 欢迎star]( https://github.com/lunhui1994/node-music-api)
-#### 2020/6/03
+@[TOC](文章目录)
+# 更新
 
+**2020/6/03**
 1. 接口已恢复。感谢[蒟蒻...](https://blog.csdn.net/weixin_44159306)的帮助, 才能这么快解决这个问题。有兴趣可以查看他的关于sign获取的[文章](https://blog.csdn.net/weixin_44159306/article/details/106292092)
 2. 之前分出了ts的分支，主要开始维护ts分支，master可能会更新的晚一点，如果需要自己启服务的话可以下载ts分支，有问题也可以回复，我可以协助一下。
 
-#### 2020/5/27
+ **2020/5/27**
 
 1. 发现获取vkey的接口现在获取不到了，应该是官方换了请求方式，目前播放地址受到了影响，无法播放，修复时间待定。
 
-#### 2020/5/7
+ **2020/5/7**
 
 1. 之前要使用api的话只能通过服务端请求，嗯嗯..想了想，现在支持跨域了。还是仅测试使用，服务器太渣渣。。经不起造。
 
-#### 2020/2/25
+ **2020/2/25**
 
 1. 最近在做新的项目，叫小鱼干APP，可以在百度，vivo，小米，apple store 中下载，暂时没有时间来搞这个音乐api的东西了，不过服务没有停，如果想用来测试或者玩玩的还是可以用的。
 
 
-#### 2019/12/26 更新
+**2019/12/26** 
 
 1. 获取歌曲播放地址接口 增加 lyric参数代表是否获取歌词。
 2. 增加获取歌词接口
 
 
-#### 2019/12/24 更新
+ **2019/12/24** 
 
 1. 所有音乐接口更改，增加一层music/ ，获取地址改为 music/song
 2. 增加福利图片接口
@@ -43,17 +43,17 @@ top: true
 
 > 接口仅供交流学习使用
 
-[github 项目地址](https://github.com/lunhui1994/node-music-api)   希望大家给个star 以支撑我初期坚持不懈的动力。
+[Github 项目地址](https://github.com/lunhui1994/node-music-api)   
 
 因为之前使用网络上别人封装的音乐api现在无法使用，或者一些需要付费使用，当然这也无可厚非。
 
 但对我而言，只需要简单的一些音乐api做一些东西。 感觉给钱有点亏。 就自己搞一个简单的符合我的需求的吧。
 
+
 # 文档
 
 <!-- more -->
 
-## 所支持的Api
 
 1. 音乐搜索
 2. 音乐top100列表
@@ -100,7 +100,7 @@ top: true
 eg：
 
 ```json
-    http://api.zsfmyz.top/music/list?p=1&n=30&w=蔡徐坤
+    https://api.zsfmyz.top/music/list?p=1&n=30&w=蔡徐坤
 ```
 
 返回参数举例
@@ -484,34 +484,32 @@ eg:
 
 over 暂时只有这 ~~ 三 ~~ 四个，不过做一个音乐demo足够了，有兴趣的话可以试试。
 
-~~ http://api.zsfmyz.top/ ~~ https://api.zsfmyz.top/ 是目前开放的api接口地址，可直接食用。
+~~http://api.zsfmyz.top/~~    https://api.zsfmyz.top/ 是目前开放的api接口地址，可直接食用。
 
 
 # 原接口说明
 
-### 搜索
+**搜索**
  - https://c.y.qq.com/soso/fcgi-bin/client_search_cp?aggr=1&cr=1&flag_qc=0&p=1&n=30&w=简单爱
 
-### 封面 
+**封面** 
  - http://imgcache.qq.com/music/photo/album_300/[albumid%100]/300_albumpic_[albumid]_0.jpg, albumid%100, albumid
  - 比如albumid=8217，封面地址就是
  - http://imgcache.qq.com/music/photo/album_300/17/300_albumpic_8217_0.jpg。
 
-### 歌曲token 
-**此方法需要参考文章 06 / 3 号更新中的获取sign的文章再获取token**
+**歌曲token** 
+> **此方法需要参考本文开头说明中的 2020/6/03 更新中的说明的获取sign的文章再获取token**
  - https://c.y.qq.com/base/fcgi-bin/fcg_music_express_mobile3.fcg?format=json205361747&platform=yqq&cid=205361747&songmid=003lghpv0jfFXG&filename=C400003lghpv0jfFXG.m4a&guid=126548448
 
 1. songmid可以从歌曲信息中取到，filename根据songmid生成。
 2. 比如，songmid是003lghpv0jfFXG，则filename就是前缀加上C400，后缀加上.m4a，即C400003lghpv0jfFXG.m4a。
 3. 其他字段format、platform、cid、guid可以写死，但都是必须的。
 
-### 拼接播放地址
+ **拼接播放地址**
  - http://ws.stream.qqmusic.qq.com/C400003lghpv0jfFXG.m4a?fromtag=0&guid=126548448&vkey=D661E5DF19B8FEB2FBFC554276746AC608AE98B0F30595B3B3BAD5C1C89ECCDD7BE599E306F786621856D22D6BD6B96F5DD344CF3814DB71
 
 [原文依据](https://www.jianshu.com/p/67e4bd47d981)
 
-以下是我根据此api所写的服务及小程序的项目地址，大家可以拿来测试体验。
+以下是我根据此api所写的服务的项目地址，大家可以拿来测试体验。
 
-## [小程序项目地址欢迎star](https://github.com/lunhui1994/wx-music)
-
-## [音乐api服务项目地址欢迎star]( https://github.com/lunhui1994/node-music-api)
+[音乐api服务项目地址欢迎star]( https://github.com/lunhui1994/node-music-api)
