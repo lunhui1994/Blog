@@ -104,3 +104,13 @@ background-size: 60px 100%;
 ```
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200703010130334.png)
 其他效果留给大家去实践~
+
+下一篇：[CSS揭秘：5.条纹背景（下）](https://www.zsfmyz.top/Css/CSS%E6%8F%AD%E7%A7%98%EF%BC%9A5.%E6%9D%A1%E7%BA%B9%E8%83%8C%E6%99%AF%EF%BC%88%E4%B8%8B%EF%BC%89/)
+
+# 相关阅读
+- [CSS揭秘：1.半透明边框](https://blog.csdn.net/lunhui1994_/article/details/106653195)
+- [CSS揭秘：2.多重边框](https://blog.csdn.net/lunhui1994_/article/details/106677231)
+- [CSS揭秘：3.灵活的背景定位](https://blog.csdn.net/lunhui1994_/article/details/106699349)
+- [CSS揭秘：4.边框内圆角](https://blog.csdn.net/lunhui1994_/article/details/106845534)
+- [CSS揭秘：5.条纹背景（上）](https://blog.csdn.net/lunhui1994_/article/details/106933714)
+- [CSS揭秘：5.条纹背景（下）](https://blog.csdn.net/lunhui1994_/article/details/107192736)

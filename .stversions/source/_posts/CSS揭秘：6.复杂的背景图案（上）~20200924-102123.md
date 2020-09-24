@@ -1,12 +1,12 @@
 ---
 title: CSS揭秘：6.复杂的背景图案（上）
-date: 2020-09-24 11:14:27
+date: 2020-09-23 11:14:27
 categories: Css
 tags: Css
 keywords: 复杂的背景图案, linear-gradient, radial-gradient
 ---
 
-# 复杂的背景图案
+# 前言
 上一篇文章中我们学会了如何使用渐变实现条纹状的背景，但是实际上条纹背景并不是我们能实现的唯一的背景图案，利用渐变我们可以实现很多更为复杂的图案，本篇会介绍一些其他的简单而实用的背景图案。
 
 <!-- more -->
@@ -166,3 +166,10 @@ keywords: 复杂的背景图案, linear-gradient, radial-gradient
 3. 波点使用到了**radial-gradient**径向渐变，使用方法和线性渐变相似。
 4. 棋盘图案则借助了background-position对直角三角形进行定位，以组合出正方形图案。
 
+# 相关阅读
+- [CSS揭秘：1.半透明边框](https://blog.csdn.net/lunhui1994_/article/details/106653195)
+- [CSS揭秘：2.多重边框](https://blog.csdn.net/lunhui1994_/article/details/106677231)
+- [CSS揭秘：3.灵活的背景定位](https://blog.csdn.net/lunhui1994_/article/details/106699349)
+- [CSS揭秘：4.边框内圆角](https://blog.csdn.net/lunhui1994_/article/details/106845534)
+- [CSS揭秘：5.条纹背景（上）](https://blog.csdn.net/lunhui1994_/article/details/106933714)
+- [CSS揭秘：5.条纹背景（下）](https://blog.csdn.net/lunhui1994_/article/details/107192736)

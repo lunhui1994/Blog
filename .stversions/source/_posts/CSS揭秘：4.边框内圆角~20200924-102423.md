@@ -7,9 +7,6 @@ keywords: 边框内圆角, RGBA/HSLA, background-clip
 ---
 # 边框内圆角
 > 背景知识：box-shadow，outline，“多重边框”
-
-<!-- more -->
-
 ## 一、两个div嵌套
 两个div实现内圆角很容易，只需要内圆角外直角即可。
 ### div First Try

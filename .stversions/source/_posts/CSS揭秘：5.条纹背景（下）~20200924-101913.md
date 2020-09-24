@@ -8,8 +8,6 @@ keywords: linear-gradient, background-size
 
 上篇文章讲述了实现条纹效果所使用的CSS特性并实现了水平和垂直条纹，接下来我们来实现斜向条纹。
 
-<!-- more -->
-
 回忆一下之前的效果
 
 水平条纹
@@ -104,3 +102,12 @@ background: repeating-linear-gradient(60deg, #58a 25%, rgba(85, 136, 170, .5) 0,
 		 ```css
 		background: repeating-linear-gradient(60deg, #58a 25%, rgba(85, 136, 170, .5) 0, rgba(85, 136, 170, .5) 50%, #58a 0, #58a 75%, rgba(85, 136, 170, .5) 0, rgba(85, 136, 170, .5) 100%);
 		```
+下一篇：[CSS揭秘：6.复杂的背景图案（上）](https://blog.csdn.net/lunhui1994_/article/details/108526888)
+
+# 相关阅读
+- [CSS揭秘：1.半透明边框](https://blog.csdn.net/lunhui1994_/article/details/106653195)
+- [CSS揭秘：2.多重边框](https://blog.csdn.net/lunhui1994_/article/details/106677231)
+- [CSS揭秘：3.灵活的背景定位](https://blog.csdn.net/lunhui1994_/article/details/106699349)
+- [CSS揭秘：4.边框内圆角](https://blog.csdn.net/lunhui1994_/article/details/106845534)
+- [CSS揭秘：5.条纹背景（上）](https://blog.csdn.net/lunhui1994_/article/details/106933714)
+- [CSS揭秘：5.条纹背景（下）](https://blog.csdn.net/lunhui1994_/article/details/107192736)

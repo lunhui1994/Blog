@@ -1,9 +1,9 @@
 ---
-title: CSS揭秘：5.条纹背景（上）
+title: CSS揭秘：4.边框内圆角
 date: 2020-09-23 11:14:27
 categories: Css
 tags: Css
-keywords: linear-gradient, background-size
+keywords: 边框内圆角, RGBA/HSLA, background-clip
 ---
 
 # 条纹背景
@@ -29,8 +29,6 @@ css线性渐变小结
 3. line-gradient中相邻的两个颜色值代表，从色标A渐变到色标B。
 4. 颜色后紧跟的数值，代表AB两个颜色之间的渐变区间。（差值为渐变区间的长度，若差值为0，则为突变）
 5. 颜色后的数值为0时，自动取前一位的数值。
-
-<!-- more -->
 
 background-size
 ---
@@ -104,3 +102,13 @@ background-size: 60px 100%;
 ```
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200703010130334.png)
 其他效果留给大家去实践~
+
+下一篇：[CSS揭秘：5.条纹背景（下）](https://blog.csdn.net/lunhui1994_/article/details/107192736)
+
+# 相关阅读
+- [CSS揭秘：1.半透明边框](https://blog.csdn.net/lunhui1994_/article/details/106653195)
+- [CSS揭秘：2.多重边框](https://blog.csdn.net/lunhui1994_/article/details/106677231)
+- [CSS揭秘：3.灵活的背景定位](https://blog.csdn.net/lunhui1994_/article/details/106699349)
+- [CSS揭秘：4.边框内圆角](https://blog.csdn.net/lunhui1994_/article/details/106845534)
+- [CSS揭秘：5.条纹背景（上）](https://blog.csdn.net/lunhui1994_/article/details/106933714)
+- [CSS揭秘：5.条纹背景（下）](https://blog.csdn.net/lunhui1994_/article/details/107192736)

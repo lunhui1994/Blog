@@ -7,7 +7,6 @@ keywords: 灵活的背景定位, background-position, background-origin, calc()
 ---
 # 灵活的背景定位
 > 背景知识：`background-position`的扩展语法，`background-origin，calc()`
-<!-- more -->
 
 ## background-position扩展语法
 1. **background-position扩展语法：** css3 中background-position 语法可以通过在偏移量前指定关键字，来设置四条边的偏移量。
