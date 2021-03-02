@@ -4,7 +4,6 @@ date: 2018-05-21 16:59:13
 categories: Css
 tags: Css
 keywords: css3, 马赛克, filter, blur
-top: true
 ---
 
 >  前两篇文介绍了css3的过滤器filter用来实现图片的高斯模糊效果，还有js拖拽的功能。
